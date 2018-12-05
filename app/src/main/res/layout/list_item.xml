@@ -5,48 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v4.widget.CircleImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_foreground"/>
-
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="direction of"
-            android:id="@+id/quake_direction"/>
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:minHeight="56dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="San Fransisco, CA"
-            android:id="@+id/quake_location"/>
+            tools:text="2.5"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/quake_magnitude"/>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:minHeight="56dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            tools:text="Date"
-            android:id="@+id/quake_date"/>
+            tools:text="San Fransisco"
+            android:textStyle="bold"
+            android:id="@+id/quake_location"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="56dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            tools:text="Time"
-            android:id="@+id/quake_time"/>
+            tools:text="Date"
+            android:textStyle="bold"
+            android:id="@+id/quake_date"/>
+
     </LinearLayout>
 
 </LinearLayout>
