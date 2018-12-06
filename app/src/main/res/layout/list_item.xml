@@ -1,74 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/quake_magnitude"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/magnitude_circle"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_margin="8dp"
+        tools:text="2.5" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:minHeight="56dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/quake_offset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="Offset" />
+
+        <TextView
+            android:id="@+id/quake_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="Primary Location" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:paddingLeft="16dp"
-        android:minHeight="56dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="2.5"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:id="@+id/quake_magnitude"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
         android:minHeight="56dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingRight="16dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Offset"
-            android:textStyle="bold"
-            android:id="@+id/quake_offset"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Primary Location"
-            android:textStyle="bold"
-            android:id="@+id/quake_location"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:minHeight="56dp"
-        android:gravity="center"
-        android:paddingRight="16dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Date"
-            android:textStyle="bold"
             android:id="@+id/quake_date"
-            android:gravity="right"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Time"
-            android:textStyle="bold"
             android:gravity="right"
-            android:id="@+id/quake_time" />
+            android:textStyle="bold"
+            tools:text="Date" />
+
+        <TextView
+            android:id="@+id/quake_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textStyle="bold"
+            tools:text="Time" />
 
     </LinearLayout>
 
