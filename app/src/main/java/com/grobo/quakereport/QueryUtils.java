@@ -64,7 +64,9 @@ public final class QueryUtils {
 
                 long time = properties.getLong("time");
 
-                earthquakes.add(new Quake(mag, place, time));
+                String url = properties.getString("url");
+
+                earthquakes.add(new Quake(mag, place, time, url));
 
             }
 
