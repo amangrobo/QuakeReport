@@ -36,7 +36,7 @@ public class ListItemAdapter extends ArrayAdapter<Quake> {
         quakeMagnitudeView.setText(formattedMagnitude);
 
         GradientDrawable magnitudeCircle = (GradientDrawable) quakeMagnitudeView.getBackground();
-        int magnitudeColor = getMagnitudeColor((int) currentEarthquake.getMagnitude());
+        int magnitudeColor = getMagnitudeColor((int) Math.floor(currentEarthquake.getMagnitude()));
         magnitudeCircle.setColor(magnitudeColor);
 
         String primaryLocation;
