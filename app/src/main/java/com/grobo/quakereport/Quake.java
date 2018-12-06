@@ -2,21 +2,21 @@ package com.grobo.quakereport;
 
 public class Quake {
 
-    private String mMagnitude;
+    private double mMagnitude;
     private String mLocation;
-    private String mQuakeDate;
+    private long mQuakeTimeMilisecs;
 
 
-    public Quake(String magnitude, String location, String quakeDate) {
+    public Quake(double magnitude, String location, long quakeTimeMilisecs) {
         mMagnitude = magnitude;
         mLocation = location;
-        mQuakeDate = quakeDate;
+        mQuakeTimeMilisecs = quakeTimeMilisecs;
     }
 
-    public String getMagnitude() {return mMagnitude;}
+    public double getMagnitude() {return mMagnitude;}
 
     public String getLocation() {return mLocation;}
 
-    public String getQuakeDate() {return mQuakeDate;}
+    public long getQuakeTimeMilisecs() {return mQuakeTimeMilisecs;}
 
 }

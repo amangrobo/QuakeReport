@@ -26,7 +26,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:minHeight="56dp"
         android:gravity="center"
         android:orientation="vertical">
@@ -34,7 +34,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="San Fransisco"
+            tools:text="Offset"
+            android:textStyle="bold"
+            android:id="@+id/quake_offset"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Primary Location"
             android:textStyle="bold"
             android:id="@+id/quake_location"/>
 
@@ -43,9 +49,10 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:minHeight="56dp"
         android:gravity="center"
+        android:paddingRight="16dp"
         android:orientation="vertical">
 
         <TextView
@@ -53,7 +60,15 @@
             android:layout_height="wrap_content"
             tools:text="Date"
             android:textStyle="bold"
-            android:id="@+id/quake_date"/>
+            android:id="@+id/quake_date"
+            android:gravity="right"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Time"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:id="@+id/quake_time" />
 
     </LinearLayout>
 
