@@ -1,7 +1,11 @@
 package com.grobo.quakereport;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,13 +23,18 @@ public class EarthquakeActivity extends AppCompatActivity {
 
         ListView quakeListView = (ListView) findViewById(R.id.quake_list_view);
 
-        // Create a new {@link ArrayAdapter} of earthquakes
-        ListItemAdapter adapter = new ListItemAdapter(this, earthquakes);
+        final ListItemAdapter adapter = new ListItemAdapter(this, earthquakes);
 
-        // Set the adapter on the {@link ListView}
-        // so the list can be populated in the user interface
         quakeListView.setAdapter(adapter);
 
+        quakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Quake currentEarthquake = adapter.getItem(position);
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(currentEarthquake.getUrl()));
+                startActivity(websiteIntent);
+            }
+        });
 
     }
 }
