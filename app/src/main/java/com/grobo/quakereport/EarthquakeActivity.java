@@ -15,7 +15,7 @@ import static com.grobo.quakereport.QueryUtils.doEverything;
 public class EarthquakeActivity extends AppCompatActivity {
 
     private static final String USGS_REQUEST_URL =
-            "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=6&limit=10";
+            "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=5&limit=100";
 
     private ListItemAdapter mAdapter;
 
@@ -41,7 +41,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         });
 
         EarthquakeAsyncTask task = new EarthquakeAsyncTask();
-        task.execute();
+        task.execute(USGS_REQUEST_URL);
     }
 
     private class EarthquakeAsyncTask extends AsyncTask<String, Void, List<Quake>> {

@@ -21,7 +21,7 @@ import java.util.List;
 
 public final class QueryUtils {
 
-    public static final String LOG_TAG = EarthquakeActivity.class.getName();
+    public static final String LOG_TAG = QueryUtils.class.getName();
 
     private QueryUtils() {
     }
